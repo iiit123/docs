@@ -2,7 +2,6 @@
 
 * [Initial page](README.md)
 * [connection](connection/README.md)
-  * [Untitled](connection/untitled.md)
   * [api](connection/api/README.md)
     * [adwords](connection/api/adwords.md)
   * [db](connection/db/README.md)
