@@ -1,68 +1,89 @@
-Markdown Cheatsheet
-===================
+# concepts
 
-- - - - 
-# Heading 1 #
+## Markdown Cheatsheet
 
-    Markup :  # Heading 1 #
+## Heading 1 \#
 
-    -OR-
+```text
+Markup :  # Heading 1 #
 
-    Markup :  ============= (below H1 text)
+-OR-
 
-## Heading 2 ##
+Markup :  ============= (below H1 text)
+```
 
-    Markup :  ## Heading 2 ##
+### Heading 2 \#\#
 
-    -OR-
+```text
+Markup :  ## Heading 2 ##
 
-    Markup: --------------- (below H2 text)
+-OR-
 
-### Heading 3 ###
+Markup: --------------- (below H2 text)
+```
 
-    Markup :  ### Heading 3 ###
+#### Heading 3 \#\#\#
 
-#### Heading 4 ####
+```text
+Markup :  ### Heading 3 ###
+```
 
-    Markup :  #### Heading 4 ####
+**Heading 4 \#\#\#\#**
 
+```text
+Markup :  #### Heading 4 ####
+```
 
 Common text
 
-    Markup :  Common text
+```text
+Markup :  Common text
+```
 
 _Emphasized text_
 
-    Markup :  _Emphasized text_ or *Emphasized text*
+```text
+Markup :  _Emphasized text_ or *Emphasized text*
+```
 
 ~~Strikethrough text~~
 
-    Markup :  ~~Strikethrough text~~
+```text
+Markup :  ~~Strikethrough text~~
+```
 
-__Strong text__
+**Strong text**
 
-    Markup :  __Strong text__ or **Strong text**
+```text
+Markup :  __Strong text__ or **Strong text**
+```
 
-___Strong emphasized text___
+_**Strong emphasized text**_
 
-    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
+```text
+Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
+```
 
-[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+[Named Link](http://www.google.fr/) and [http://www.google.fr/](http://www.google.fr/) or [http://example.com/](http://example.com/)
 
-    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+```text
+Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+```
 
-[heading-1](#heading-1 "Goto heading-1")
-    
-    Markup: [heading-1](#heading-1 "Goto heading-1")
+[heading-1](concepts.md#heading-1)
+
+```text
+Markup: [heading-1](#heading-1 "Goto heading-1")
+```
 
 Table, like this one :
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+| First Header | Second Header |
+| :--- | :--- |
+| Content Cell | Content Cell |
+| Content Cell | Content Cell |
 
-```
+```text
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
@@ -71,7 +92,9 @@ Content Cell  | Content Cell
 
 `code()`
 
-    Markup :  `code()`
+```text
+Markup :  `code()`
+```
 
 ```javascript
     var specificLanguage_code = 
@@ -90,15 +113,17 @@ Content Cell  | Content Cell
     }
 ```
 
-    Markup : ```javascript
-             ```
+```text
+Markup : ```javascript
+         ```
+```
 
 * Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
+  * Nested bullet
+    * Sub-nested bullet etc
 * Bullet list item 2
 
-~~~
+```text
  Markup : * Bullet list
               * Nested bullet
                   * Sub-nested bullet etc
@@ -109,87 +134,94 @@ Content Cell  | Content Cell
  Markup : - Bullet list
               - Nested bullet
                   - Sub-nested bullet etc
-          - Bullet list item 2 
-~~~
+          - Bullet list item 2
+```
 
 1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
+   1. A nested numbered list
+   2. Which is numbered
 2. Which is numbered
 
-~~~
+```text
  Markup : 1. A numbered list
               1. A nested numbered list
               2. Which is numbered
           2. Which is numbered
-~~~
+```
 
-- [ ] An uncompleted task
-- [x] A completed task
+* [ ] An uncompleted task
+* [x] A completed task
 
-~~~
+```text
  Markup : - [ ] An uncompleted task
           - [x] A completed task
-~~~
+```
 
-- [ ] An uncompleted task
-    - [ ] A subtask
+* [ ] An uncompleted task
+  * [ ] A subtask
 
-~~~
+```text
  Markup : - [ ] An uncompleted task
               - [ ] A subtask
-~~~
+```
 
 > Blockquote
->> Nested blockquote
+>
+> > Nested blockquote
 
-    Markup :  > Blockquote
-              >> Nested Blockquote
+```text
+Markup :  > Blockquote
+          >> Nested Blockquote
+```
 
 _Horizontal line :_
-- - - -
 
-    Markup :  - - - -
+```text
+Markup :  - - - -
+```
 
 _Image with alt :_
 
-![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+![Title is optional](http://via.placeholder.com/200x150)
 
-    Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+```text
+Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+```
 
 Foldable text:
 
-<details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-</details>
-<details>
-  <summary>Title 2</summary>
-  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
-</details>
+Title 1
 
-    Markup : <details>
-               <summary>Title 1</summary>
-               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-             </details>
+Content 1 Content 1 Content 1 Content 1 Content 1Title 2
 
-```html
+Content 2 Content 2 Content 2 Content 2 Content 2
+
+```text
+Markup : <details>
+           <summary>Title 1</summary>
+           <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+         </details>
+```
+
+```markup
 <h3>HTML</h3>
 <p> Some HTML code here </p>
 ```
 
 Hotkey:
 
-<kbd>⌘F</kbd>
+⌘F
 
-<kbd>⇧⌘F</kbd>
+⇧⌘F
 
-    Markup : <kbd>⌘F</kbd>
+```text
+Markup : <kbd>⌘F</kbd>
+```
 
 Hotkey list:
 
 | Key | Symbol |
-| --- | --- |
+| :--- | :--- |
 | Option | ⌥ |
 | Control | ⌃ |
 | Command | ⌘ |
@@ -207,6 +239,9 @@ Hotkey list:
 
 Emoji:
 
-:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
+:exclamation: Use emoji icons to enhance text. :+1: Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
 
-    Markup : Code appears between colons :EMOJICODE:
+```text
+Markup : Code appears between colons :EMOJICODE:
+```
+
